@@ -18,8 +18,10 @@ public abstract class Subject {
 
     protected void notifyObservers() {
         // TODO: Implement fireUpdate method.
+        System.out.println("sending updates to observers");
         for (Observer o: observers) {
             o.update(this);
+
         }
     }
 }

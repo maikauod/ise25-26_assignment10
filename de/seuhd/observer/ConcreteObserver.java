@@ -2,9 +2,9 @@ package de.seuhd.observer;
 
 public class ConcreteObserver implements Observer {
     // TODO: Add fields and static variables.
-    private static int counter = 0;
+    private static int counter = 1;
     private int currentValue;
-    private int id;
+    private final int id;
     private final Subject subject;
 
     public ConcreteObserver(Subject subject) {
@@ -19,6 +19,7 @@ public class ConcreteObserver implements Observer {
         // TODO: Implement update method.
         if (subject instanceof ConcreteSubject) {
             this.currentValue = ConcreteSubject.value;
+            System.out.println("Observer " + this.id + " received update form subject: new value = " + this.currentValue);
         }
 
     }
